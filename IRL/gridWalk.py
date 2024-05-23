@@ -3,8 +3,6 @@
 # @Author : PeterPan
 # @File : gridWalk
 # @Project : maxent_gridworld.py
-# 本脚本将网格视作智能体, 构建其在坂田社区的运动环境
-# 在本脚本之中, 作者暂时不将路段的属性加入至环境的设计之中
 import gym
 import gym.spaces as spaces
 import numpy as np
@@ -38,7 +36,7 @@ class bicycleGridRiding(gym.Env):
         self.moveProb = moveProb
         self.attrTable = attrTable
 
-        # 设置动作空间
+        # Action Space
         self.action_space = spaces.Discrete(9, start=-4)
         self.observation_space = spaces.Dict({
             # 'agentLocation': spaces.Box(low=0, high=max(self.nrow-1, self.ncol-1), shape=(2,), dtype=int),
@@ -143,9 +141,9 @@ class bicycleGridRiding(gym.Env):
         targetLoc = np.array(self.state_to_coordinate(self._target_location))
         return {"distance": np.linalg.norm(agentLoc - targetLoc, ord=1)}
 
-    # 如下为本环境用到的过程性输出
     def transitFunc(self, state, action):
         '''
+        Dict Version
         P = {
          state 1 : {next State 1 : P11, next State 2 : P12, ···},
          state 2 : {next State 1 : P21, next State 2 : P22, ···},
@@ -155,10 +153,8 @@ class bicycleGridRiding(gym.Env):
         ]
         '''
         transition_probs = {}
-        opposite_direction = -action  # 输入的是动作的值
-        # opposite_direction = -self._actions[action]      # 修改过的代码
-        # 采用的同样是深度优先算法
-        # 区分采用动作为 0 与动作不为 0 两种情况
+        opposite_direction = -action  # Input: Action Index
+        
         if action != 0:
             candidates = [a for a in list(range(-4, 5, 1))
                           if a != opposite_direction]  # a != 0 : 8 个选择
@@ -190,18 +186,16 @@ class bicycleGridRiding(gym.Env):
 
         return transition_probs
 
-    # 如下为本环境用到的过程性输出
     def transitFuncArray(self, state, action):
         '''
+        Array Version
         State:[
             Action[PS1, PS2, ···, PSn]
         ]
         '''
         transition_probs = np.zeros((len(self.states),))    # [numStates,]
-        opposite_direction = -action  # 输入的是动作的值
-        # opposite_direction = -self._actions[action]      # 修改过的代码
-        # 采用的同样是深度优先算法
-        # 区分采用动作为 0 与动作不为 0 两种情况
+        opposite_direction = -action  # Input: Action Index
+        
         if action != 0:
             candidates = [a for a in list(range(-4, 5, 1))
                           if a != opposite_direction]  # a != 0 : 8 个选择
@@ -235,9 +229,9 @@ class bicycleGridRiding(gym.Env):
 
     def rewardFunc(self, agentLoc):
         '''
-        根据网格属性制定相应的奖励
-        :param state: 网格的位置
-        :return: 智能体运行至当前网格所能获得的奖励值
+        Reward
+        :param state: Location of Agent State
+        :return: Reward Value
         '''
         terminated = agentLoc == self._target_location
         reward = 10 if terminated else 0
@@ -333,30 +327,5 @@ if __name__ == '__main__':
 
     env = bicycleGridRiding(attrTable=attrTable)
     state, _ = env.reset()
-    # print(state)
-    # nextState, reward, done, _ = env.step(6)
-    # print(nextState)
     print(env.transitFuncArray(state=11, action=-1))
     print(env.transitFunc(state=11, action=-1))
-    # print(env._get_obs())
-    # env.step(action=1)
-    # print(env._get_obs())
-    # print(attrTable['Pass'][11])
-    # transitionProb = env.transitFunc(state=12, action=1)
-    # for next_state in transitionProb:
-    #     prob = transitionProb[next_state]
-    #     # 59, 11
-    #     reward = env.rewardFunc(next_state)
-    #     print("状态{}的信息为:{}".format(next_state, [prob, next_state, reward]))
-    # nextState = env._move(12, 1)
-    # print(nextState)
-    # print(torch.zeros((10,5)))
-    # prod = np.array(list(product(range(len(env.states)), range(9))))
-    # print(prod)
-    # state_range = prod[:, 0]
-    # action_range = prod[:, 1]
-    # for state, action in zip(state_range, action_range):
-    #     print(state, action)
-    #     actionIndex = env.index2Action(action)
-    #     print(actionIndex)
-    #     print('_' * 30)
