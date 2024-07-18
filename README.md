@@ -29,6 +29,7 @@ The rest of the paper is organized as follows. Section 2 introduces the study ar
 ## Study Area and Dataset
 ### Study area
 In our study, we focus on Bantian Sub-district in Longgang District, Shenzhen as the research area. This area is characterized by relatively consistent cycling demand, convenient traffic facilities, comfortable travel conditions and diverse environmental attributes, making is suitable for investigating cyclists' preferces to environmental elements.
+
 Bantian Sub-district has served as a showcase for the integration of technology and urban development within the Guangdong-Hong Kong-Macao Greater Bay Area. It is particularly renowned for its technology industry, and attracts a large number of young commuters. Situated on the border of three districts in Shenzhen, the area offers diverse transportation options for residents. Specifically, it boasts well-established public transportation, including 2 metro lines with 22 subway stations, complemented by a sufficient supply of DBS services. The total road network spans 38.97 km, comprising 5,229 intersections and 7,039 road segments accessible to cyclists. Moreover, Bantian Sub-district provides favorable conditions for year-round outdoor cycling with an average temperature of 23.3°C and gentle slopes averaging less than 10°. Its spatial heterogeneity in natural and socio-economic environments enables us to distinguish between various areas and extract typical attributes.
   
 ### Data
