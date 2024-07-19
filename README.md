@@ -43,7 +43,8 @@ Second, we mapped trajectory points onto the road network using a Hidden Markov 
 Finally, we filtered the mapped DBS trajectory data using specific criteria informed by preliminary literature reviews and exploratory analysis. Given the subtropical location and an average November temperature of 19.7℃, our data comprehensively represented cycling behavior. To account for the direct impact of weather conditions on cycling, we excluded data from two rainy days(Nov 9th and Nov 16th). Additionally, to mitigate potential biases in estimating preferences due to temporal changes, we focused our analysis on cyclists' behaviors during weekdays and daylight hours. Furthermore, our DBS trajectories deviated significantly from the shortest path when applying the Dijkstra Algorithm, aligning with findings in current literature. Specifically, approximately 83.8% of cyclists selected the shortest path for trips involving fewer than five road segments. Therefore, we concentrated on cycling trips with more than five road segments, resulting in **10000** distinct trip trajectories as the valid dataset for further investigation. The results of exploratory data analysis are shown in Appendix 1.
 
 #### Street View Images
-
+Aa a popular type of big geospatial data, Street View Images(SVI) can provide a detailed depiction of the visible environment of urban physical space, as well as implicitly convey information about invisible environments such as socio-economic and human activities. In our study, we applied SVI sourced from Baidu to 
+The Street View Image data using in this study were sourced from Baidu, encompressing **3000** distinct images
 
 ## Methodology
 ## Appendix 1. Exploratory Data Analysis for DBS Trajectory Data
