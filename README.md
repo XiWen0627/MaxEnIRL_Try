@@ -48,4 +48,6 @@ Street View Images (SVI), a widely used type of big geospatial data, offers deta
 The SVI data used in this study were obtained from Baidu, comprising 7924 distinct panoramas in Bantian Sub-district, primarily captured in 2017. Semantic segmentation was conducted using the DeepLabV3+ model pretrained on the Cityscapes dataset, to extract visual elements. As a result, we identified eight primary categories and 21 detailed subcategories of street scenery, as detailed in Table 2. Subsequently, we quantified the cyclists' visual perceptions by calculating the ratios of the pixels assigned to each category relative to the total number of pixels in the image, normalized using min-max scaling between zero and one. The segmentation achieved an average coverage of 97.88%, indicating its applicability for further investigation.
 
 ## Methodology
+
+
 ## Appendix 1. Exploratory Data Analysis for DBS Trajectory Data
