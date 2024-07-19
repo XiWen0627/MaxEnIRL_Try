@@ -34,6 +34,15 @@ Bantian Sub-district has served as a showcase for the integration of technology 
   
 ### Data
 #### DBS Trajectory Data
-#### Street View Image
+The DBS trajectory data utlized in this study were sourced from a well-known DBS service provider, comprising **10,00** independent trips collected in Bantian Sub-district from Nov 1st to Nov 30 th, 2017. Specifically, our DBS trajectory data encompass basic order details such as Order ID,  User ID, DBS ID, Start time, End Time, Start Coordinate, End Coordinate and a sequence of trajectory points collected at 3-second interval, as illustrated in Table 1. Preproccessing of DBS trajectory data involves three stages: raw data cleaning, map matching and data filtering.
+
+First of all, we identify and eliminate the counter-intuitive cycling trips in order to enhance data quility. Specifically, we filter out trips less than 3 minutes or exceeding 1 hour, considering the rebalancing process. Additionally, we remove the trajectory points where speeds exceed 30 km/h, likely due to poor GPS signal. Following this data cleaning process, we obtained a dataset of **10,000** distinct cycling trips suitable for map matching.
+
+Second, in order to better approximate the link-based decision-making process of DBS cycling, trajectory data was mapped onto the road network using the open-source map matching method Leuven Map Matching. Additionally, preliminary experiments have shown that the riding behavior is influenced by temporal patterns as shown in Fig 2.
+
+Finally, we filter the mapped DBS trajectory data using specific criteria informed by preliminary literature reviews and exploratory analysis. Given the subtropical location and an average November temperature of 19.7℃, our data conprehensively represent cycling behavior. To account for the direct impact of weather conditions on cycling, We **exclude** datafrom two rainy days(Nov 9th and Nov 16th). Additionally, to mitigate potential biases in estimating preferences due to temporal changes, we focused our analysis on cyclists' behaviors during weekdays and daylight hours. Furthermore, our DBS trajectories deviate significantly from the shortest path when applying the Dijkstra Algorithm, aligning with findings in current literature. Specifically, approximately 83.8% of cyclists select the shortest path for trips involving fewer than 4 road segments. Therefore, we concentrate on cycling trips with more than 5 road segments, resulting in **10000** distinct trip trajectories as the valid dataset for further investigation. The result of exploratory data analysis are shown in Appendix A.
+
+#### Street View Images
+
 
 ## Methodology
