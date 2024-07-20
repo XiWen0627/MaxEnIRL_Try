@@ -48,6 +48,14 @@ Street View Images (SVI), a widely used type of big geospatial data, offers deta
 The SVI data used in this study were obtained from Baidu, comprising 7924 distinct panoramas in Bantian Sub-district, primarily captured in 2017. Semantic segmentation was conducted using the DeepLabV3+ model pretrained on the Cityscapes dataset, to extract visual elements. As a result, we identified eight primary categories and 21 detailed subcategories of street scenery, as detailed in Table 2. Subsequently, we quantified the cyclists' visual perceptions by calculating the ratios of the pixels assigned to each category relative to the total number of pixels in the image, normalized using min-max scaling between zero and one. The segmentation achieved an average coverage of 97.88%, indicating its applicability for further investigation.
 
 ## Methodology
+### Framework
+The detailed procedure of cycling  involves abundant temporal and semantic information, providing researchers with insights to cyclists' behavioral patterns. However, the complexity of cycling environments and the stochastic nature of behaviors present challenges in uncovering cyclists' preferences from  detailed procedures.
 
+In our study, we propose a data-driven framework designed to quantify and interpret cyclists' visual preferences along urban streets, focusing specifically on their cycling procedures. The overall workflow comprises three distinct steps, as illustrated in **Fig 1**. First, we regard cycling as a link-based route choice process given OD pairs and environmental factors. We formulate it as a Markov Decision Process(MDP) so that complex interaction and spatiotemporal interdependence characteristics can be taken into account. 
+
+Secondly, we adopt Maximum Entropy Deep Reinforcement Learning (MEDIRL) to quantify cyclists’ environmental preferences from the integration of SVI and DBS trajectories, and validated the results by 
+
+
+![methodologyFramework](https://github.com/user-attachments/assets/e83100dc-7758-4f08-b447-a266d79c6dda)
 
 ## Appendix 1. Exploratory Data Analysis for DBS Trajectory Data
