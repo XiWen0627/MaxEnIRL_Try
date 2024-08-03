@@ -1,6 +1,12 @@
 # MaxEnDeepIRL Application for uncovering visual preference in cycling route decision procedure.
 XiWen0627's Master Project : Unraveling  Built Environment Preference to Route Choice via IRL Approach 
 
+A Data-Driven Framework For Discovering Cyclists' Street Visual Preferences Through Multi-Source Big Data -> **Problem Oriented**
+
+Cycling Procedure MEDIRL e-> **Technological Oriented**
+## Research Topic
+Fitness of reseach question and methodology.
+
 ## Introduction: importance of cycling and DBS system 
 Cycling, widely recognized as a sustainable means of transportation, promotes outdoor activities and presents a potential solution to urban challenges such as traffic congestion and air pollution. The emergence of Dockless Bike Sharing (DBS) has further enhanced cycling by significantly improving accessibility to active travel. Consequently, DBS has garnered widespread adoption across numerous countries and has surged in popularity, particularly following the Covid-19 pandemic. Unlike motor vehicle travel, cyclists make decisions based not only on long-term travel plans but also on immediate environmental factors. However, urban planning often fails to accommodate the unique characteristics of cycling behavior, resulting in insufficient support for cyclists. Therefore, gaining a detailed understanding of cyclists' preferences and behaviors within DBS systems is crucial for bicycle-friendly urban planning.     **->Background**
 
