@@ -161,6 +161,10 @@ The overall workflow comprises three distinct steps, as illustrated in **Figure 
 ### Algorithms Implemented
 - [DeepLabV3Plus](https://github.com/VainF/DeepLabV3Plus-Pytorch)
 - [Cityscape Dataset](https://www.cityscapes-dataset.com/)
+  
+### SVI Segmanti
+- Calculate the ratios of the pixels assigned to each category relative to the total number of pixels in the image, normalized using min-max scaling between zero and one.
+- The segmentation achieves an average coverage of 97.88%, indicating its applicability for further investigation.
 
 ## 3. Inverse Reinforcement Learning
 ### Algorithms Implemented
