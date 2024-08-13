@@ -24,6 +24,8 @@
   - Obtain by Python package Osmnx. 
   
 ### **Functions**
+**Attention**: If you're unsure how to construct a class for map matching, please visit [examples](https://leuvenmapmatching.readthedocs.io/en/latest/usage/introduction.html).
+
 #### **mapMatching.py**
 - **`construct_road_network(mapcon, shapefile, coordinate='epsg:4547')`** Construct a road network suitable for further operations using the Leuven MapMatching.
 - **`load_road_network(network_dir, map_con)`** Load node and link information from existing files.
