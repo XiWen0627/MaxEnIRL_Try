@@ -155,7 +155,7 @@ The overall workflow comprises three distinct steps, as illustrated in **Figure 
 ### My Contribution 
 - The output of the Leuven MapMatching Algorithm is a sequence of road segments, which restricts the ability to fully understand the relationship between individual trajectory points and their mapped results.
 - This project further developes the Leuven MapMatching Algorthm to obtain the match result for each trajectory point.
-- For more details, please visit my [source code and its documentation](https://github.com/XiWen0627/MaxEnIRL_Try/tree/main/MapMatching).
+- For more details, please visit my [**source code and documentation**](https://github.com/XiWen0627/MaxEnIRL_Try/tree/main/MapMatching).
 
 ## 2. Semantic Segmantation
 ### Algorithms Implemented
