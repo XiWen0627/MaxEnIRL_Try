@@ -7,19 +7,26 @@ Discovering Cyclists' Street Visual Preferences Through Multi-Source Big Data Us
 **`Cyclists' Preferences`** General patterns identified from individual route choice process.
 
 ## Research Topic
-How to discover cyclists' prefernces from their routing process?  
+- How to discover cyclists' prefernces from their routing process?  
 
-More specifically, we aim to discover cyclists’ general **street visual preferences** based on their continuous route decision procedures influenced by streetscape characteristics.
+- More specifically, we aim to discover cyclists’ general **street visual preferences** based on their continuous route decision procedures influenced by streetscape characteristics.
 
 ## Our Solution
-Maximum Entropy Deep Inverse Reinforcement Learning(MEDIRL) ＋ Explainable Artificial Intelligence(XAI)  
+we propose an **Inverse Reinforcement Learning(IRL) based framework** to **quantify** and **interpret** cyclists' visual preferences along urban streets, focusing specifically on their cycling process. The overall research idea is described as follows. 
 
-we propose an **IRL-based framework** to **quantify** and **interpret** cyclists' visual preferences along urban streets, focusing specifically on their cycling process. The overall research idea is described as follows.  
+- **Data**: Dockless-Bike-Sharing(DBS) Trajectory Data & Street View Imagery(SVIs) 
+- **Methodology**: Maximum Entropy Deep Inverse Reinforcement Learning(MEDIRL) ＋ Explainable Artificial Intelligence(XAI)  
 
-![**Research Conceptual Framework**](https://github.com/user-attachments/assets/19a350ce-f5fa-4df5-b349-cb7d895330ab)
+<p float="left">
+  <img src="https://github.com/user-attachments/assets/19a350ce-f5fa-4df5-b349-cb7d895330ab"  title="Research Conceptual Framework" />
+  <em>Research Conceptual Framework</em>
+</p>
 
+  
 ### Fitness of reseach question and methodology
-IRL is ideal for our research scenario due to its efficiency in mining sequential dependencies and semantic information in trajectory data, as well as its flexibility in integrating Deep Learning(DL) architectures and high dimensional features, which helps capture thenon-linear and complicated nature of preferences. Furthermore, IRL's unique training process makes it more behaviorally interpretable compared to conventional DL methods and facilitates further simulation and optimization.  
+- IRL is effective in mining sequential dependencies and semantic information in trajectory data.
+- IRL is flexible in integrating Deep Learning(DL) architectures and high dimensional features, which helps capture thenon-linear and complicated nature of cycling preferences.
+- The unique training process of IRL makes it more behaviorally interpretable compared to conventional DL methods and facilitates further simulation and optimization.  
 
 ### Framework
 The overall workflow comprises three distinct steps, as illustrated in Figure 3. Practically, cycling is treated as a route decision process constrained by road spatial networks, taking into account origin-destination (OD) pairs and street visual environments. 
@@ -32,8 +39,25 @@ The overall workflow comprises three distinct steps, as illustrated in Figure 3.
 
 ![methodologyFramework](https://github.com/user-attachments/assets/e83100dc-7758-4f08-b447-a266d79c6dda)
 
-## Algorithms Implemented
+### Partial Results of Our study
+#### Desciptive Statistics of Model Output
+<p float="left">
+  <img src="https://github.com/user-attachments/assets/14d4fda5-8b67-4c46-8bff-83952108d90e" width="49%" />
+  <img src="https://github.com/user-attachments/assets/c0437627-a85a-485c-af7d-56efe4aa7808" width="49%" /> 
+</p>
 
+#### Model Evaluation
+#### Interpretability of Environmental Preference of Route Decision Process
+<p float="left">
+  <img src="https://github.com/user-attachments/assets/8e78ee2d-016c-47d5-bde3-b60c11eb08b9" width="49%" height="100%" />
+  <img src="https://github.com/user-attachments/assets/25bd3432-4859-4349-a983-0338ff5a276e" width="49%" height=100% /> 
+</p>
+
+## Algorithms Implemented
+- Linear programming IRL. From Ng & Russell, 2000. Small state space and large state space linear programming IRL.
+- Maximum entropy IRL. From Ziebart et al., 2008.
+- Deep maximum entropy IRL. From Wulfmeier et al., 2015; original derivation.
+- [Inverse-Reinforcement-Learning From Mattew Alger et al., 2017.](https://github.com/MatthewJA/Inverse-Reinforcement-Learning?tab=readme-ov-file)
 
 A Data-Driven Framework For Discovering Cyclists' Street Visual Preferences Through Multi-Source Big Data -> **Problem Oriented**
 
