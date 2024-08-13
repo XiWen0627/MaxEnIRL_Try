@@ -159,10 +159,14 @@ The overall workflow comprises three distinct steps, as illustrated in **Figure 
 
 ## 2. Semantic Segmantation
 ### Algorithms Implemented
+- [DeepLabV3Plus](https://github.com/VainF/DeepLabV3Plus-Pytorch)
+- [Cityscape Dataset](https://www.cityscapes-dataset.com/)
 
-## Inverse Reinforcement Learning
+## 3. Inverse Reinforcement Learning
 ### Algorithms Implemented
 - Linear programming IRL. From Ng & Russell, 2000. Small state space and large state space linear programming IRL.
 - Maximum entropy IRL. From Ziebart et al., 2008.
 - Deep maximum entropy IRL. From Wulfmeier et al., 2015; original derivation.
 - [Inverse-Reinforcement-Learning From Mattew Alger et al., 2017.](https://github.com/MatthewJA/Inverse-Reinforcement-Learning?tab=readme-ov-file)
+  
+### My Contribution 
