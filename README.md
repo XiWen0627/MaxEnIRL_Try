@@ -149,12 +149,20 @@ The overall workflow comprises three distinct steps, as illustrated in **Figure 
 
 
 # Part 2. Documentation
+## 1. Map Matching
+### Algorithms Implemented
+- [Leuven MapMatching](https://leuvenmapmatching.readthedocs.io/en/latest/)
+### My Contribution 
+- The output of the Leuven MapMatching Algorithm is a sequence of road segments, which restricts the ability to fully understand the relationship between individual trajectory points and their mapped results.
+- This project further developes the Leuven MapMatching Algorthm to obtain the match result for each trajectory point.
+- For more details, please visist my source code and its documentation.
 
-## Algorithms Implemented
+## 2. Semantic Segmantation
+### Algorithms Implemented
+
+## Inverse Reinforcement Learning
+### Algorithms Implemented
 - Linear programming IRL. From Ng & Russell, 2000. Small state space and large state space linear programming IRL.
 - Maximum entropy IRL. From Ziebart et al., 2008.
 - Deep maximum entropy IRL. From Wulfmeier et al., 2015; original derivation.
 - [Inverse-Reinforcement-Learning From Mattew Alger et al., 2017.](https://github.com/MatthewJA/Inverse-Reinforcement-Learning?tab=readme-ov-file)
-<p float="left">
-  <img src="https://github.com/user-attachments/assets/b2bf4453-f704-4b3d-9ac8-3d062a9b0b71" width="80%" />
-</p>
