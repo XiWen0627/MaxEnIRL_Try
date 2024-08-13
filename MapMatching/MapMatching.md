@@ -4,7 +4,6 @@
 ## My Contribution
 - The output of the Leuven MapMatching Algorithm is a sequence of road segments, which restricts the ability to fully understand the relationship between individual trajectory points and their mapped results.
 - This project further developes the Leuven MapMatching Algorthm to obtain the match result for each trajectory point.
-- For more details, please visit my source code and its documentation.
   
 ## Requirements
 - Numpy
@@ -15,14 +14,19 @@
   
 ## Documentation
 ### Data
-- DBS Trajectory Data
+- **DBS Trajectory Data**
+  - I’m sorry, but I cannot provide all the data in this document due to privacy concerns. Instead, I have included a small sample to help you customize your own programs.
   - Source from a well-known DBS service provider collected from Nov 1st to Nov 30th, 2017.
-  - 
+  - Samples and data formats.
   
-- Road Network  
+- **Road Network**  
   - Open data from Open Street Map(OSM).
   - Obtain by Python package Osmnx. 
   
 ### Functions
-- `construct_road_network(mapcon, shapefile, coordinate='epsg:4547')`
-- `load_road_network(network_dir, map_con)`
+#### mapMatching.py
+- **`construct_road_network(mapcon, shapefile, coordinate='epsg:4547')`** Construct a road network suitable for further operations using the Leuven MapMatching.
+- **`load_road_network(network_dir, map_con)`** Load node and link information from existing files.
+  
+#### join.py
+Attach atrributes to matched trajectory points.
