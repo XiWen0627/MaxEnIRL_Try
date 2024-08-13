@@ -15,7 +15,7 @@
 ## Documentation
 ### Data
 - **DBS Trajectory Data**
-  - I’m sorry, but I cannot provide all the data in this document due to privacy concerns. Instead, I have included a small sample to help you customize your own programs.
+  - I’m sorry, but I cannot provide all the DBS trajectory data in this document due to privacy concerns. Instead, I have included a small sample to help you customize your own programs.
   - Source from a well-known DBS service provider collected from Nov 1st to Nov 30th, 2017.
   - [Samples and data formats](https://github.com/XiWen0627/MaxEnIRL_Try/blob/main/MapMatching/Sample.txt).
   
