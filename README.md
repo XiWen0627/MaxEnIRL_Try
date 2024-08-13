@@ -1,11 +1,44 @@
-# MaxEnDeepIRL Application for uncovering visual preference in cycling route decision procedure.
-XiWen0627's Master Project : Unraveling  Built Environment Preference to Route Choice via IRL Approach 
+# The Application of Maximum Entropy Deep Inverse Reinforcement Learning in Cycling.
+Discovering Cyclists' Street Visual Preferences Through Multi-Source Big Data Using Deep Inverse Reinforcement Learning
+
+## Concept Clarification
+**`Cyclists' Route Choice`** A continuous road selection procedure, constrained by origin and destination (OD) and influenced by the built environment, represents how cyclists navigate from place to place.
+
+**`Cyclists' Preferences`** General patterns identified from individual route choice process.
+
+## Research Topic
+How to discover cyclists' prefernces from their routing process?  
+
+More specifically, we aim to discover cyclists’ general **street visual preferences** based on their continuous route decision procedures influenced by streetscape characteristics.
+
+## Our Solution
+Maximum Entropy Deep Inverse Reinforcement Learning(MEDIRL) ＋ Explainable Artificial Intelligence(XAI)  
+
+we propose an **IRL-based framework** to **quantify** and **interpret** cyclists' visual preferences along urban streets, focusing specifically on their cycling process. The overall research idea is described as follows.  
+
+![**Research Conceptual Framework**](https://github.com/user-attachments/assets/19a350ce-f5fa-4df5-b349-cb7d895330ab)
+
+### Fitness of reseach question and methodology
+IRL is ideal for our research scenario due to its efficiency in mining sequential dependencies and semantic information in trajectory data, as well as its flexibility in integrating Deep Learning(DL) architectures and high dimensional features, which helps capture thenon-linear and complicated nature of preferences. Furthermore, IRL's unique training process makes it more behaviorally interpretable compared to conventional DL methods and facilitates further simulation and optimization.  
+
+### Framework
+The overall workflow comprises three distinct steps, as illustrated in Figure 3. Practically, cycling is treated as a route decision process constrained by road spatial networks, taking into account origin-destination (OD) pairs and street visual environments. 
+
+- Formalize cycling process as a Markov Decision Process (MDP) by integrating SVIs and DBS trajectories to **detail cycling procedures outlined earlier** for further analysis.
+- Employ IRL to **recover the underlying reward function of MDP from observed trajectory data**. The reward function reflects the general principal cyclists follow, influenced by environmental factors, and served as quantified street visual preferences.
+   - Approximate this reward function using a combination of maximum entropy model and deep neural network (DNN) to balance diverse cyclist preferences and capture their non-linear nature (MEDIRL). 
+   - Validate learned results by comparing similarities between reconstructed and real trajectories.
+-  Utilize XAI to **interpret the contributions** of specific visual elements to cyclists' street visual preferences.  
+
+![methodologyFramework](https://github.com/user-attachments/assets/e83100dc-7758-4f08-b447-a266d79c6dda)
+
+## Algorithms Implemented
+
 
 A Data-Driven Framework For Discovering Cyclists' Street Visual Preferences Through Multi-Source Big Data -> **Problem Oriented**
 
 Cycling Procedure MEDIRL e-> **Technological Oriented**
-## Research Topic
-Fitness of reseach question and methodology.
+
 
 ## Introduction: importance of cycling and DBS system 
 Cycling, widely recognized as a sustainable means of transportation, promotes outdoor activities and presents a potential solution to urban challenges such as traffic congestion and air pollution. The emergence of Dockless Bike Sharing (DBS) has further enhanced cycling by significantly improving accessibility to active travel. Consequently, DBS has garnered widespread adoption across numerous countries and has surged in popularity, particularly following the Covid-19 pandemic. Unlike motor vehicle travel, cyclists make decisions based not only on long-term travel plans but also on immediate environmental factors. However, urban planning often fails to accommodate the unique characteristics of cycling behavior, resulting in insufficient support for cyclists. Therefore, gaining a detailed understanding of cyclists' preferences and behaviors within DBS systems is crucial for bicycle-friendly urban planning.     **->Background**
@@ -59,7 +92,7 @@ The detailed procedure of cycling  involves abundant temporal and semantic infor
 
 In our study, we propose a data-driven framework designed to quantify and interpret cyclists' visual preferences along urban streets, focusing specifically on their cycling procedures. The overall workflow comprises three distinct steps, as illustrated in **Fig 1**. cycling is treated as a route decision process constrained by road spatial networks, taking into account origin-destination (OD) pairs and street visual environments. We formalize it as a Markov Decision Process (MDP) integrating SVI and DBS trajectories. Secondly, we employ Maximum Entropy Deep Reinforcement Learning (MEDIRL) to quantify cyclists’ environmental preferences derived from the cycling procedures outlined earlier. We validate learned results by comparing similarities between reconstructed and real trajectories. Finally, we utilize explainable Artificial Intelligence(XAI) to interpret the contributions of specific visual elements to cyclists' environmental preferences.
 
-![methodologyFramework](https://github.com/user-attachments/assets/e83100dc-7758-4f08-b447-a266d79c6dda)
+
 
 ### Preliminaries and Problem Formulation
 Cycling procedures can be regarded as a MDP, which provides a general framework for modeling the sequential decision process of a cyclist. A MDP is generally defined as $M=\{S,A,T,R,γ\}$, where $S$ denotes the state space, representing the set of possible positions the agent can be; A denotes the set of possible actions the agent can take. Generally speaking, the sequence of state-action pairs is also referred to as the trajectory, i.e., \{(s_1,a_1 ),(s_2,a_2 ),···,(s_t,a_t )\}. T(s_t,a_t,s_(t+1) ) denotes a transition model that determines the next state s_(t+1) given the current state s_t and action a_t. R(s,a) is the reward function, defined as the feedback obtained by the agent when taking action a∈A in state s∈S. In the modeling of sequential decision-making problems, the policy π describes the moving strategy at each stat. The agent's policy is often non-deterministic, and this stochastic policy can be intuitively understood as the probability of the agent taking action a_t∈A given the current state s_t∈S, denoted as Pr(a_t│s_t ). The quality of a policy is often evaluated based on its long-term return, and the most popular definition is the discounted return, i.e., G_t= ∑_(i=0)^(+∞)▒〖γ^i r_(t+1) 〗  γ∈[0,1]. When γ=0, the agent is short-sighted, only focusing on immediate rewards and disregarding the temporal dependencies of the policy; as γ approaches 1, the agent considers future rewards more. In the RL setting, the reward function R(s,a)  s∈S,a∈A is given, and the objective is to find the optimal policy π^* that maximizes the expected cumulative reward for the agent. This is accomplished by sampling trajectory data through continuous interaction between the agent and the environment.
