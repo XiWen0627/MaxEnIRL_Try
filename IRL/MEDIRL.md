@@ -111,8 +111,8 @@ Find the optimal state values.
     
 ### deepIRL
 - **Attributes**
-  - **`env`**
-  - **`stateFeatures`**
+  - **`env`** BicycleGridWalking environment.
+  - **`stateFeatures`** State vector.
   - **`passList`** Road restriction.
   - **`trajProcess`** trajProcess.
   - **`ini_net`** Initial neural network.
