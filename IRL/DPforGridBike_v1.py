@@ -195,27 +195,31 @@ if __name__ == '__main__':
     env.reset()
     print('环境已经完成构建')
 
+
+    ## -----------------------------------------------
+    ## --------- Test for MDP environments -----------
+    ## -----------------------------------------------
     # transition_probs = env.transitFunc(1473, 1)
     # print(transition_probs)
-    #
+    
     # print(1473==env._target_location)
 
-    # Value Iteration
+    ## Value Iteration
     # agent = ValueIteration(env=env)
     # V_grid = agent.plan(threshold=0.01)
     # print(V_grid)
-    #
+    
     # VIendTime = time.time()
     # print('本脚本需要运行的总时间为{}'.format(VIendTime-startTime))
-    #
+    
     # policy = agent.get_policy(V_grid)
     # print(policy)
 
 
     # q = agent.policy_to_q(V_grid, 0.9)  # -> [numStates, numActions]
     # QTable = np.sum(q, axis=1).reshape(env.nrow, env.ncol)
-    # print(QTable)  # -> Total Action Values Of Each States
-    #
+    # print(QTable)  # -> Total Action Values Of Each State
+
     # fig, ax = plt.subplots()
     # V_grid1 = V_grid.reshape(env.nrow, env.ncol)
     # im = ax.imshow(V_grid1)
