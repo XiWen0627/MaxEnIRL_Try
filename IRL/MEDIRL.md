@@ -22,6 +22,8 @@
 - Pytorch==2.4.0-CUDA11.8
 
 ## Project Documentation
+Following is a brief list of functions and classes exported by modules. Please visit souce code for more details.
+
 ## 1. [gridWalk.py](https://github.com/XiWen0627/MaxEnIRL_Try/blob/main/IRL/gridWalk.py)
 ### Intuition
 Cycling route decision process can be mathematically modeled as an MDP, which forms the foundation for applying IRL. In our study, **cyclists are treated as agents in an MDP**. Solving this MDP model will give us the optimal decision strategy for each different location. Specifically, we can define the elements of the MDP as follows.  
