@@ -98,6 +98,8 @@ Find the optimal state values.
   - **`until_converge`** Determine whether the algorithm has converged.
     
 ## 3. [MEDIRL.ipynb](https://github.com/XiWen0627/MaxEnIRL_Try/blob/main/IRL/MEDIRL.ipynb)
+Implements MEDIRL based on Ziebart et al., 2008 and Wulfmeier et al., 2015, using symbolic methods with Pytorch.
+
 ### TrajProcess
 - **Attributes**
   - **`trajData`** Trajectory data.
