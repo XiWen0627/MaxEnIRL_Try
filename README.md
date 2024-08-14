@@ -188,4 +188,4 @@ The overall workflow comprises three distinct steps, as illustrated in **Figure 
 ### My contribution
 - Change the style of the Shapley dependence plot without exporting the Shapley values.
 - **Cluster the individual Shap values to clarify the characteristics of streetscapes favored by cyclists**(Not successful, but it can be regarded as a potential direction in similar research scenarios).
-- Please visit [**my exploratory analysis**]() for more information.
+- Please visit [**my exploratory analysis**](https://github.com/XiWen0627/MaxEnIRL_Try/blob/main/SHAP/shapVisual.md) for more information.
