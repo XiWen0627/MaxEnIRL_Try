@@ -100,6 +100,15 @@ Find the optimal state values.
 ## 3. [MEDIRL.ipynb](https://github.com/XiWen0627/MaxEnIRL_Try/blob/main/IRL/MEDIRL.ipynb)
 Implements MEDIRL based on Ziebart et al., 2008 and Wulfmeier et al., 2015, using symbolic methods with Pytorch.
 
+<table align="center" width="100%">
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/a09968e2-e1ed-4714-a77c-e89279df5c25" width="1000" alt="Figure 1" /></td>
+  </tr>
+  <tr align="center">
+    <td><em>Training Process of MEDIRL</em></td>
+  </tr>
+</table>
+
 ### TrajProcess
 - **Attributes**
   - **`trajData`** Trajectory data.
