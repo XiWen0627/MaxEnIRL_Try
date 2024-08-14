@@ -42,7 +42,8 @@ Cycling route decision process can be mathematically modeled as an MDP, which fo
 </table>
 
 ### Implementation
-#### bicycleGridRiding(gym.Env) -> Cycling Environment
+#### bicycleGridRiding(gym.Env)
+Cycling environment.
 - **Attributes**
   - **`nrow`** float, the number of rows in environment. -> grid environment
   - **`ncol`** float, the number of columns in environment. -> grid environment
@@ -67,7 +68,45 @@ Cycling route decision process can be mathematically modeled as an MDP, which fo
   - **`transitFunc`** dictionary, the possible actions for each state.
   - **`transitFuncArray`** ndarray, the possible actions for each state.
   - **`rewardFunc`** ndarray, the reward for each states.
-  - **`reset`** reset the environment.
+  - **`reset`** Reset the environment, and let agent return to its original state.
 
 ## 2. [DPforGridBike_v1.py](https://github.com/XiWen0627/MaxEnIRL_Try/blob/main/IRL/DPforGridBike_v1.py)
+### Intuition
+Dynamic Planning
+### Implementation
+#### Planner -> Parent class
+- **Attributes**
+  - **`env`** BicycleGridWalking environment.
+  - **`policy`** Return the result of learning.
+  - **`rewardFunc`** Reward function of MDP.
+- **Mehods**
+  - **``initialize``** Initialize the environment.
+  - **`plan`** 
+  - **`transition_at`** Transition probability and coresponding reward.
+    
+#### ValueIteration -> Children class
+- **Attributes**
+  - **`gamma`** Discount rate. 
+- **Methods**
+  - **`plan`** Get state value.
+  - **`get_policy`** Get the policy under the given state value.
+  - **`policy_to_q`** Get the action value for each state and each action.
+### optimal_value
+Find the optimal state values.
+- **Methods**
+  - **`update`** Update the state value.
+  - **`until_converge`** Determine whether the algorithm has converged.
+    
 ## 3. [MEDIRL.ipynb](https://github.com/XiWen0627/MaxEnIRL_Try/blob/main/IRL/MEDIRL.ipynb)
+### TrajProcess
+- **Attributes**
+  - **`trajData`** Trajectory data.
+  - **`env`** BicycleGridWalking environment.
+  - **`device`** torch.device.
+- **Methods**
+  - **maxTrajLength** Maxmium length of trajectory data.
+  - **Padding** Trajectory padding function.
+  - **find_svf** State visit frequency(SVF) of input trajectory data.
+  - **find_expected_svf** Expected state visit frequencyof given policy and state values.
+    
+### deepIRL
