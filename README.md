@@ -152,25 +152,40 @@ The overall workflow comprises three distinct steps, as illustrated in **Figure 
 ## 1. Map Matching
 ### Algorithms Implemented
 - [Leuven MapMatching](https://leuvenmapmatching.readthedocs.io/en/latest/)
+  
 ### My Contribution 
 - The output of the Leuven MapMatching Algorithm is a sequence of road segments, which restricts the ability to fully understand the relationship between individual trajectory points and their mapped results.
-- This project further developes the Leuven MapMatching Algorthm to obtain the match result for each trajectory point.
-- For more details, please visit my [**source code and documentation**](https://github.com/XiWen0627/MaxEnIRL_Try/tree/main/MapMatching).
+- This project further developes the Leuven MapMatching Algorthm to **obtain the match result for each trajectory point**.
+- Please visit my [**source code and documentation**](https://github.com/XiWen0627/MaxEnIRL_Try/tree/main/MapMatching) for more details.
 
 ## 2. Semantic Segmantation
 ### Algorithms Implemented
 - [DeepLabV3Plus](https://github.com/VainF/DeepLabV3Plus-Pytorch)
-- [Cityscape Dataset](https://www.cityscapes-dataset.com/)
+- [Cityscape Dataset](https://www.cityscapes-dataset.com/)  
   
-### SVI Segmanti
+### Algorithms Application
 - Calculate the ratios of the pixels assigned to each category relative to the total number of pixels in the image, normalized using min-max scaling between zero and one.
-- The segmentation achieves an average coverage of 97.88%, indicating its applicability for further investigation.
+- The segmentation achieves an average coverage of 97.88%, indicating its applicability for further investigation.  
 
 ## 3. Inverse Reinforcement Learning
 ### Algorithms Implemented
-- Linear programming IRL. From Ng & Russell, 2000. Small state space and large state space linear programming IRL.
-- Maximum entropy IRL. From Ziebart et al., 2008.
-- Deep maximum entropy IRL. From Wulfmeier et al., 2015; original derivation.
-- [Inverse-Reinforcement-Learning From Mattew Alger et al., 2017.](https://github.com/MatthewJA/Inverse-Reinforcement-Learning?tab=readme-ov-file)
+- [Linear programming IRL. From Ng & Russell, 2000. Small state space and large state space linear programming IRL.](https://ai.stanford.edu/~ang/papers/icml00-irl.pdf)
+- [Maximum entropy IRL. From Ziebart et al., 2008.](https://cdn.aaai.org/AAAI/2008/AAAI08-227.pdf)
+- [Deep maximum entropy IRL. From Wulfmeier et al., 2015; original derivation.](https://arxiv.org/abs/1507.04888#)
+- [Inverse-Reinforcement-Learning From Mattew Alger et al., 2017.](https://github.com/MatthewJA/Inverse-Reinforcement-Learning?tab=readme-ov-file)  
   
 ### My Contribution 
+- **Formulate the cycling procedure as Markov Decision Process(MDP) and customize both the agent and the simulation environment for the research area**.
+- **Implement MEDIRL Algorithm Using Pytorch**
+  - The former implemention of MEDIRL is developed based on open source DL library **Theano**, which limits its ability to integrate advanced DL approaches such as CNNs, RNNs, and Transformers,···. 
+  - **This project utilizes pytorch to implement MEDIRL, allowing for future extension**
+- Please visit my [**source code and documentation**](https://github.com/XiWen0627/MaxEnIRL_Try/tree/main/MapMatching) for more details.
+ 
+## 4.Interpretable Machine Learning
+### Algorithms Implemented
+- [SHAP](https://github.com/shap/shap)
+    
+### My contribution
+- Change the style of the Shapley dependence plot without exporting the Shapley values.
+- **Cluster the individual Shap values to clarify the characteristics of streetscapes favored by cyclists**(Not successful, but it can be regarded as a potential direction in similar research scenarios).
+- Please visit [**my exploratory analysis**]() for more information.
