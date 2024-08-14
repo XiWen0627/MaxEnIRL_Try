@@ -40,7 +40,7 @@ Cycling route decision process can be mathematically modeled as an MDP, which fo
 </table>
 
 ### Implementation
-#### bicycleGridRiding(gym.Env) -> Cyclists Agent And Environment
+#### bicycleGridRiding(gym.Env) -> Cycling Environment
 - **Attributes**
   - **`nrow`** float, the number of rows in environment. -> grid environment
   - **`ncol`** float, the number of columns in environment. -> grid environment
@@ -50,22 +50,22 @@ Cycling route decision process can be mathematically modeled as an MDP, which fo
   - **`observation_space`** spaces.Dict, observation space.
   - **`_actions`** dictionary, possible actions taken by agent.
   - **`defaultReward`** array, default reward at each state.
-- **Properties**
-  - **`states`**
-  - **`coordinate_to_state`**
-  - **`state_to_coordinate`**
-  - **`state_to_feature`**
-  - **`action2Index`**
-  - **`index2Action`**
-  - **`_get_obs`**
-  - **`_get_info`**
-  - **`_move`**
-  - **`step`**
+  - **`states`** float, the number of states in my environment.
+
 - **Methods**
-  - **`transitFunc`**
-  - **`transitFuncArray`**
-  - **`rewardFunc`**
-  - **`reset`**
+  - **`coordinate_to_state`**  Convert tuple(row, col) to index.
+  - **`state_to_coordinate`** Convert index to tuple(row, col).
+  - **`state_to_feature`** Vetcor ***Pos***.
+  - **`_get_obs`** Vector **SE****, street visual characteristics of current state.
+  - **`_get_info`** Vector ***Dest***, the distance from current location to target location 
+  - **`action2Index`** Convert action code to index.
+  - **`index2Action`** Convert index to action code.
+  - **`_move`** Next location given current state & action.
+  - **`step`** Information about the agent in the next time step.
+  - **`transitFunc`** dictionary, the possible actions for each state.
+  - **`transitFuncArray`** ndarray, the possible actions for each state.
+  - **`rewardFunc`** ndarray, the reward for each states.
+  - **`reset`** reset the environment.
 
 ## 2. [DPforGridBike_v1.py](https://github.com/XiWen0627/MaxEnIRL_Try/blob/main/IRL/DPforGridBike_v1.py)
 ## 3. [MEDIRL.ipynb](https://github.com/XiWen0627/MaxEnIRL_Try/blob/main/IRL/MEDIRL.ipynb)
