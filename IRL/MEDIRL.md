@@ -110,3 +110,17 @@ Find the optimal state values.
   - **find_expected_svf** Expected state visit frequencyof given policy and state values.
     
 ### deepIRL
+- **Attributes**
+  - **`env`**
+  - **`stateFeatures`**
+  - **`passList`** Road restriction.
+  - **`trajProcess`** trajProcess.
+  - **`ini_net`** Initial neural network.
+  - **`epochs`** Epochs.
+  - **`learning_rate`** Learning rate.
+  - **`l1`** l1 regularization.
+  - **`l2`** l2 regularization.
+  - **`device`** torch.device().
+- **Methods**
+  - **`update`** MEDIRL learning process, ***policy generato***r and ***reward estimator***.
+  - **`train`** MEDIRL training process.
