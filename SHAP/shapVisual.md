@@ -77,7 +77,7 @@
   </tr>
 </table>
 
-**3. Cluster Analysis of Shapley Values**
+[**3. Cluster Analysis of Shapley Values**](https://github.com/XiWen0627/MaxEnIRL_Try/blob/main/SHAP/Cluster.ipynb)
 
 The parallel coordinate plot reveals specific patterns in the distribution of Shapley values.
 As a result, we employ several clustering methods to uncover preference patterns from shapley values.
