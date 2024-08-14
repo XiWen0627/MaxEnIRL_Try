@@ -179,7 +179,7 @@ The overall workflow comprises three distinct steps, as illustrated in **Figure 
 - **Implement MEDIRL Algorithm Using Pytorch**
   - The former implemention of MEDIRL is developed based on open source DL library **Theano**, which limits its ability to integrate advanced DL approaches such as CNNs, RNNs, and Transformers,···. 
   - **This project utilizes pytorch to implement MEDIRL, allowing for future extension**
-- Please visit my [**source code and documentation**](https://github.com/XiWen0627/MaxEnIRL_Try/tree/main/MapMatching) for more details.
+- Please visit my [**source code and documentation**](https://github.com/XiWen0627/MaxEnIRL_Try/tree/main/IRL) for more details.
  
 ## 4.Interpretable Machine Learning
 ### Algorithms Implemented
