@@ -83,20 +83,32 @@ The overall workflow comprises three distinct steps, as illustrated in **Figure 
 
 <table align="center" width="100%">
   <tr>
-    <td ><img src="https://github.com/user-attachments/assets/9c0c3ce0-f77f-482d-b53c-5e7d0e8a30e7" width="1000" alt="Figure 5" /></td>
+    <td ><img src="https://github.com/user-attachments/assets/8cdb9a23-e0af-40a9-9726-2f5acc4d20b1" width="1000" alt="Figure 5" />
+    </td>
+  </tr>
+  <tr>
+    <td ><img src="https://github.com/user-attachments/assets/87bc4311-37fb-451a-8888-4f55c68477f9" width="1000" alt="Figure 5" />
+    </td>
   </tr>
   <tr align="center">
     <td><em>Figure 5. SVF Distributions of Real and Synthetic Trajectories</em></td>
   </tr>
 </table>
 
+
 <table align="center" width="100%">
   <tr>
-    <td ><img src="https://github.com/user-attachments/assets/a906abf4-42f0-4dc2-88db-588da60b33e8" width="250" /></td>
-    <td ><img src="https://github.com/user-attachments/assets/d4d0b14b-8591-4209-8fcb-3eb140efd66a" width="250" /></td>
-    <td ><img src="https://github.com/user-attachments/assets/8dcbbf29-9a9f-423c-a24a-b635fac3156b" width="250" /></td>
-    <td ><img src="https://github.com/user-attachments/assets/b3443228-44a1-4825-8b0c-33e2cacfc490" width="250" /></td>
+    <td ><img src="https://github.com/user-attachments/assets/483388e8-9a6c-4a9e-a1be-1b77168410ca" width="325" /></td>
+    <td ><img src="https://github.com/user-attachments/assets/cbf0c5da-dbf1-4578-8175-61b7d8052cb0" width="325" /></td>
   </tr> 
+  <tr>
+    <td ><img src="https://github.com/user-attachments/assets/a007c2ab-4150-449f-b3d2-bfe0b2d86a1a" width="325" /></td>
+    <td ><img src="https://github.com/user-attachments/assets/a3044e89-c0f7-4366-8568-df5ad300eeaa" width="325" /></td>
+  </tr>
+  <tr>
+    <td ><img src="https://github.com/user-attachments/assets/a3ce5f32-d45e-4a22-848f-fa387abdbc1d" width="325" /></td>
+    <td ><img src="https://github.com/user-attachments/assets/f3beb6e6-a804-4190-b12c-073463c9c4a2" width="325" /></td>
+  </tr>
 </table>
 
 <p align="center">
